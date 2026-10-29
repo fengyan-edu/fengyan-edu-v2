@@ -1128,6 +1128,19 @@
       content: "单科 142";
     }
 
+    .feedback-image:nth-child(16)::after {
+      content: "期中 85 分";
+    }
+
+    /* 双拼方图：contain 保完整，深色底与截图背景融合 */
+    .feedback-image:nth-child(16) {
+      background: #111111;
+    }
+
+    .feedback-image:nth-child(16) img {
+      object-fit: contain;
+    }
+
     /* 竖长截图按内容位置取景，避免核心信息（短信抬头 / 成绩表格）被 cover 裁掉 */
     .feedback-image:nth-child(10) img,
     .feedback-image:nth-child(11) img,
@@ -2765,6 +2778,9 @@
         </div>
         <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看学生成绩反馈大图">
           <img src="assets/feedback15.jpg" alt="学生成绩反馈截图" width="735" height="794" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback16.jpg" alt="家长微信反馈截图" width="1260" height="1260" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="testimonial-content">
