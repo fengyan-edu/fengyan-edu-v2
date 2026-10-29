@@ -1141,6 +1141,27 @@
       object-fit: contain;
     }
 
+    .feedback-image:nth-child(17)::after {
+      content: "期末 90 分";
+    }
+
+    .feedback-image:nth-child(18)::after {
+      content: "数学 94 A";
+    }
+
+    .feedback-image:nth-child(19)::after {
+      content: "数学 120";
+    }
+
+    .feedback-image:nth-child(20)::after {
+      content: "36 分 → 90 分";
+    }
+
+    /* 第20张：试卷照片在顶部，顶部对齐保住"带试卷来"的证据 */
+    .feedback-image:nth-child(20) img {
+      object-position: center top;
+    }
+
     /* 竖长截图按内容位置取景，避免核心信息（短信抬头 / 成绩表格）被 cover 裁掉 */
     .feedback-image:nth-child(10) img,
     .feedback-image:nth-child(11) img,
@@ -2781,6 +2802,18 @@
         </div>
         <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
           <img src="assets/feedback16.jpg?v=2" alt="家长微信反馈截图" width="1888" height="1888" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback17.jpg" alt="家长微信反馈截图" width="1170" height="2532" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback18.jpg" alt="家长微信反馈截图" width="1170" height="2532" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback19.jpg" alt="家长微信反馈截图" width="1170" height="2532" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看提分案例反馈大图">
+          <img src="assets/feedback20.jpg" alt="学生提分反馈截图" width="1170" height="2532" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="testimonial-content">
