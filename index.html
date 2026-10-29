@@ -1114,6 +1114,33 @@
       content: "中考成绩";
     }
 
+    .feedback-image:nth-child(12)::after {
+      content: "数学 127";
+    }
+
+    .feedback-image:nth-child(13)::after {
+      content: "数学 148";
+    }
+
+    .feedback-image:nth-child(14)::after {
+      content: "年排 50";
+    }
+
+    .feedback-image:nth-child(15)::after {
+      content: "单科 142";
+    }
+
+    /* 竖长截图按内容位置取景，避免核心信息（短信抬头 / 成绩表格）被 cover 裁掉 */
+    .feedback-image:nth-child(10) img,
+    .feedback-image:nth-child(11) img,
+    .feedback-image:nth-child(14) img {
+      object-position: center top;
+    }
+
+    .feedback-image:nth-child(15) img {
+      object-position: left center;
+    }
+
     .feedback-image {
       cursor: zoom-in;
     }
@@ -2715,7 +2742,7 @@
           <img src="assets/feedback6.jpg" alt="家长微信反馈截图" width="756" height="1188" loading="lazy" decoding="async" />
         </div>
         <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
-          <img src="assets/feedback7.jpg" alt="家长微信反馈截图" width="1170" height="2532" loading="lazy" decoding="async" />
+          <img src="assets/feedback7.jpg" alt="家长微信反馈截图" width="1019" height="1979" loading="lazy" decoding="async" />
         </div>
         <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看学生反馈大图">
           <img src="assets/feedback8.jpg" alt="学生微信反馈截图" width="1080" height="2039" loading="lazy" decoding="async" />
@@ -2728,6 +2755,18 @@
         </div>
         <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看中考成绩反馈大图">
           <img src="assets/feedback11.jpg" alt="中考成绩反馈截图" width="934" height="1837" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看学生反馈大图">
+          <img src="assets/feedback12.jpg" alt="学生微信反馈截图" width="981" height="1618" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback13.jpg" alt="家长微信反馈截图" width="612" height="1027" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看家长反馈大图">
+          <img src="assets/feedback14.jpg" alt="家长微信反馈截图" width="993" height="2024" loading="lazy" decoding="async" />
+        </div>
+        <div class="feedback-image" tabindex="0" role="button" aria-label="点击查看学生成绩反馈大图">
+          <img src="assets/feedback15.jpg" alt="学生成绩反馈截图" width="735" height="794" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="testimonial-content">
