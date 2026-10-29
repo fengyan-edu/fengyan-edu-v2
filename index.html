@@ -1078,8 +1078,9 @@
       display: block;
     }
 
+    /* 默认不显示标签：只有下面 nth-child 明确指定了文案的卡片才出现标签 */
     .feedback-image::after {
-      content: "家长反馈截图";
+      content: none;
       position: absolute;
       bottom: 16px;
       left: 16px;
