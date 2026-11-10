@@ -1095,6 +1095,62 @@ ul { margin: 0; padding: 0; list-style: none; }
   .contact-title .ct-a, .contact-title .ct-b { display: block; }
 }
 
+/* ---- 微信二维码 ---- */
+.contact-qr {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+  padding: 20px 34px 20px 20px;
+  border-radius: var(--r-l);
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .14);
+  text-align: left;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.qr-frame {
+  flex: 0 0 auto;
+  width: 176px;
+  height: 176px;
+  padding: 13px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px -16px rgba(0, 0, 0, .55);
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.qr-txt h4 {
+  font-size: 15px;
+  color: #f2dcb4;
+  letter-spacing: .16em;
+  margin-bottom: 12px;
+}
+
+.qr-txt p {
+  font-size: 15px;
+  color: #e6ecf6;
+  line-height: 1.8;
+  max-width: 320px;
+}
+
+.qr-txt p b { color: #fff; font-weight: 600; }
+
+.qr-tip {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12.5px;
+  letter-spacing: .06em;
+  color: rgba(214, 226, 245, .66);
+}
+
 .contact-meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1347,6 +1403,20 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .contact { padding: 68px 0 60px; }
   .meta-box { padding: 18px 20px; }
+
+  .contact-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 22px 20px 24px;
+    text-align: center;
+  }
+  .qr-frame { width: 196px; height: 196px; padding: 13px; }
+  .qr-txt p { max-width: none; font-size: 14.5px; line-height: 1.85; }
+  .qr-txt h4 { margin-bottom: 10px; }
+  .qr-tip { margin-top: 12px; font-size: 12px; }
 
   .lb-prev, .lb-next { position: absolute; bottom: 26px; width: 46px; height: 46px; }
   .lb-prev { left: 20px; }
