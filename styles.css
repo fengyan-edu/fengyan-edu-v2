@@ -1408,8 +1408,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-links.is-open { opacity: 1; transform: none; pointer-events: auto; }
   .nav-links a { padding: 14px 4px; border-bottom: 1px solid rgba(232, 223, 204, .8); font-size: 15.5px; }
   .nav-links a::after { display: none; }
-  .nav-burger { display: flex; margin-left: auto; }
-  .nav-cta { display: none; }
+  /* 移动端保留顶栏预约入口，只做紧凑化 */
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+    letter-spacing: .02em;
+    box-shadow: 0 8px 18px -12px rgba(18, 41, 79, .9);
+  }
+  .nav-burger { display: flex; margin-left: 10px; }
 
   .hero { padding-top: 96px; }
   .eyebrow { letter-spacing: .24em; font-size: 10.5px; margin-bottom: 18px; }
@@ -1486,4 +1496,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 380px) {
   .math { font-size: 66px; }
   .case-flow .to { font-size: 23px; }
+
+  /* 窄屏给顶栏留出呼吸空间 */
+  .nav-inner { gap: 10px; padding: 0 16px; }
+  .brand-text { font-size: 15px; }
+  .nav-cta { padding: 0 13px; font-size: 12.5px; }
+  .nav-burger { margin-left: 6px; }
 }
