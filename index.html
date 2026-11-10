@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<link rel="stylesheet" href="styles.css?v=3" />
+<link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -344,7 +344,7 @@
         <p class="sec-sub">真实的进步，来自家长与学生的共同认可。点击图片可放大。</p>
       </div>
 
-      <div class="fb-wall">
+      <div class="fb-wall is-collapsed" id="fbWall">
         <figure class="fb reveal" data-i="0"><img src="assets/f01.jpg" alt="家长反馈：数学 123 分，宝中零班第一" width="720" height="1424" loading="lazy" decoding="async" /><figcaption>123 分 · 宝中零班第一</figcaption></figure>
         <figure class="fb fb-wide reveal" data-i="1"><img src="assets/f02.jpg" alt="家长反馈：超出预期，数学 93 A" width="720" height="619" loading="lazy" decoding="async" /><figcaption>超出预期 · 数学 93 A</figcaption></figure>
         <figure class="fb reveal" data-i="2"><img src="assets/f03.jpg" alt="家长反馈：40 分提到 70 分" width="1041" height="1944" loading="lazy" decoding="async" /><figcaption>40 → 70 分</figcaption></figure>
@@ -365,6 +365,13 @@
         <figure class="fb reveal" data-i="17"><img src="assets/f18.jpg" alt="家长反馈：入门 38 分，期中 85 分" width="720" height="720" loading="lazy" decoding="async" /><figcaption>入门数学 38 分<br />期中 85 分 · 进步明显</figcaption></figure>
         <figure class="fb reveal" data-i="18"><img src="assets/f19.jpg" alt="家长反馈：期末考试班级第一，年级第十，130 分" width="720" height="1398" loading="lazy" decoding="async" /><figcaption>期末考试 · 班级第一<br />年级第十 · 130 分</figcaption></figure>
         <figure class="fb reveal" data-i="19"><img src="assets/f20.jpg" alt="家长反馈：数学突破预定目标，班级第二" width="720" height="1596" loading="lazy" decoding="async" /><figcaption>数学突破预定目标 · 班级第二</figcaption></figure>
+      </div>
+
+      <div class="fb-more">
+        <button class="fb-more-btn" id="fbMore" type="button" aria-controls="fbWall" aria-expanded="false">
+          <span id="fbMoreTxt">查看全部 20 张家长反馈</span>
+          <i class="fbm-arrow" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </section>
@@ -442,6 +449,6 @@
   <button class="lb-next" id="lbNext" aria-label="下一张">›</button>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

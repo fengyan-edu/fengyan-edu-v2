@@ -235,6 +235,36 @@
     else if (e.key === 'ArrowRight') show(cur + 1);
   });
 
+  /* ---------- 反馈墙折叠（移动端） ---------- */
+  var fbWall = document.getElementById('fbWall');
+  var fbMoreBtn = document.getElementById('fbMore');
+  var fbMoreTxt = document.getElementById('fbMoreTxt');
+
+  if (fbWall && fbMoreBtn && fbMoreTxt) {
+    var fbItems = [].slice.call(fbWall.querySelectorAll('.fb'));
+    var fbTotal = fbItems.length;
+
+    function setFBWall(expand) {
+      fbWall.classList.toggle('is-collapsed', !expand);
+      fbMoreBtn.classList.toggle('is-open', expand);
+      fbMoreBtn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+      fbMoreTxt.textContent = expand ? '收起' : '查看全部 ' + fbTotal + ' 张家长反馈';
+      // 展开后排队的图未进过视口，补上渐入标记，避免一直透明
+      if (expand) fbItems.forEach(function (f) { f.classList.add('is-in'); });
+    }
+
+    fbMoreBtn.addEventListener('click', function () {
+      var expand = fbWall.classList.contains('is-collapsed');
+      // 收起会让上方内容骤减，先记住按钮当前所在的视口位置，收完再拉回原处
+      var keepTop = fbMoreBtn.getBoundingClientRect().top;
+      setFBWall(expand);
+      if (!expand) {
+        var delta = fbMoreBtn.getBoundingClientRect().top - keepTop;
+        if (delta) window.scrollTo({ top: Math.max(window.scrollY + delta, 0), behavior: 'auto' });
+      }
+    });
+  }
+
   /* ---------- 导航高亮 ---------- */
   var navAnchors = [].slice.call(document.querySelectorAll('.nav-links a'));
   var sections = navAnchors
